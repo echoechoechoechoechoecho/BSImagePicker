@@ -24,7 +24,6 @@ import Foundation
 import UIKit
 
 class DropdownPresentationController: UIPresentationController {
-    private let dropDownHeight: CGFloat = UIScreen.main.bounds.size.height * 0.8
     private let backgroundView = UIView()
     
     override init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?) {
@@ -51,7 +50,7 @@ class DropdownPresentationController: UIPresentationController {
     }
     
     override func size(forChildContentContainer container: UIContentContainer, withParentContainerSize parentSize: CGSize) -> CGSize {
-        return CGSize(width: parentSize.width, height: dropDownHeight)
+        return parentSize
     }
     
     override var frameOfPresentedViewInContainerView: CGRect {
